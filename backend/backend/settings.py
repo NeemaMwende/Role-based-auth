@@ -95,6 +95,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
 
+AUTH_USER_MODEL = 'authentication.User'
+
 SECRET_KEY = config('SECRET_KEY')
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
