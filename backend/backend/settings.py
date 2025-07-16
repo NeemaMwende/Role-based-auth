@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'authentication',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -92,8 +93,12 @@ REST_FRAMEWORK = {
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://localhost:3000",  "http://127.0.0.1:3000",
+    
 ]
+CORS_ALLOW_CREDENTIALS = True
+
+AUTH_USER_MODEL = 'authentication.User'
 
 SECRET_KEY = config('SECRET_KEY')
 # Password validation
